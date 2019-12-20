@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>QUIZ</h1>
+{% if Questionapp %}
+<table>
+    <thead>
+    {% for q in Questionapp %}
+    <tr>
+        <th>{{ q.Question }}</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td><input type="radio" name="answer" value="Answer1">{{ q.Answer1 }}<br></td>
+        <td><input type="radio" name="answer" value="Answer2">{{ q.Answer2 }}<br></td>
+        <td><input type="radio" name="answer" value="Answer3">{{ q.Answer3 }}<br></td>
+        <td><input type="radio" name="answer" value="Answer4">{{ q.Answer4 }}<br></td>
+    </tr>
+    </tbody>
+    {% endfor %}
+
+
+</table>
+{% else %}
+<h2>Sorry</h2>
+{% endif %}
+
+
+</body>
+</html>
